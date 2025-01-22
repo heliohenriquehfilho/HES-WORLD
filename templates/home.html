@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="selecao_1">
+        <div class="titulo">
+            <p>TERROR</p>
+        </div>
+        <div class="conteudo">
+            <a  href="{{ url_for('poster', nome='inserta_futuri') }}" onclick="alert('Você clicou no botão!')" class="poster">
+                <img src="/static/images/inserta.png" alt="Botão de Imagem">
+            </a>
+            <a href="{{ url_for('poster', nome='carlos_augusto') }}"  onclick="alert('Você clicou no botão!')" class="poster">
+                <img src="/static/images/carlos_augusto.png" alt="Botão de Imagem">
+            </a>
+            <a href="{{ url_for('poster', nome='cidade_maravilhosa') }}"  onclick="alert('Você clicou no botão!')" class="poster">
+                <img src="/static/images/Cidade_maravilhosa.png" alt="Botão de Imagem">
+            </a>
+            <a href="{{ url_for('poster', nome='fury_zone') }}"  onclick="alert('Você clicou no botão!')" class="poster">
+                <img src="/static/images/FuryZone.png" alt="Botão de Imagem">
+            </a>
+        </div>
+    </div>
+</body>
+{% endblock %}

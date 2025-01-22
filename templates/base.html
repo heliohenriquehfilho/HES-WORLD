@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}HES WORLD{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="{{ url_for('home') }}">HES WORLD</a>
+            </div>
+            <ul class="menu">
+                <li><a href="{{ url_for('jogos') }}">Jogos</a></li>
+                <li><a href="{{ url_for('series') }}">Séries</a></li>
+                <li><a href="{{ url_for('one_shot') }}">One-Shot</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
